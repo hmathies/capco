@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ImageList from "../components/ImageList";
+import Gallery from "../components/Gallery";
 
 class App extends Component {
   render() {
@@ -7,7 +7,7 @@ class App extends Component {
       <div className="App page-header container-fluid">
         <h1>CAPCO</h1>
         <p><strong>THE FUTURE.NOW</strong></p>
-        <ImageList/>
+        <Gallery/>
       </div>
   
     );
