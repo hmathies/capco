@@ -19,10 +19,12 @@ class ImageList extends Component {
   }
   render(){
     return (
-      <ul>
-        {this.state.images.map(image => <li key={image.id}>{image.url}</li>)}
-        
-      </ul>
+      <div>
+        {this.state.images.map(image => <div>
+          <img alt={"puppy"} className="img-responsive" key={image.id} src={[image.url]}/>
+          </div>)}
+      </div>  
+      
     )
   }
 }
