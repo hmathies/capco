@@ -6,11 +6,9 @@ import "./Gallery.css";
 class Gallery extends Component {
   constructor(props) {
     super(props);
-    console.log(this.props);
 
     this.state = {
-      images: [],
-      firstImageId: null
+      images: []
     };
   }
   componentWillMount() {
@@ -21,9 +19,6 @@ class Gallery extends Component {
       .then(res => {
         const images = res.data;
         this.setState({ images });
-        firstImageId = images[0].id;
-        let firstImageId = 1;
-        console.log(firstImageId);
       });
       
     }

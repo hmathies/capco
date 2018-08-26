@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-
 import "./Picture.css";
+import className from "classnames";
 
 class Picture extends Component {
-
+  
 
   render() {
     const { image } = this.props;
@@ -11,7 +11,7 @@ class Picture extends Component {
   
     return (
       
-      <img alt={"puppy"} className="picture responsive" src={image.url} id={this.props.id}/>    
+      <img alt={"puppy"} className={(this.props.id ===0 || this.props.id ===17? 'largePic' : 'picture')}  src={image.url} id={this.props.id}/>    
       
     );
   }
