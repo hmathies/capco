@@ -10,7 +10,7 @@ class Gallery extends Component {
 
     this.state = {
       images: [],
-      loadedImageId: []
+      firstImageId: null
     };
   }
   componentWillMount() {
@@ -21,6 +21,9 @@ class Gallery extends Component {
       .then(res => {
         const images = res.data;
         this.setState({ images });
+        firstImageId = images[0].id;
+        let firstImageId = 1;
+        console.log(firstImageId);
       });
       
     }
@@ -31,12 +34,12 @@ class Gallery extends Component {
     return (
       <div className="container">
         <div className="grid">
-          {this.state.images.map((image, loadedImageId) => (
-            <Picture 
-              key={image.id} 
-              id={loadedImageId} 
-              image={image} />
-          ))}
+            {this.state.images.map((image, loadedImageId) => (
+              <Picture 
+                key={image.id} 
+                id={loadedImageId} 
+                image={image} />
+            ))}
         </div>
       </div>);
   }

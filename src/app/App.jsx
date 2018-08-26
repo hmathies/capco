@@ -5,7 +5,11 @@ class App extends Component {
   render() {
     return (
      
-        <Gallery/>
+
+      <Gallery />
+
+
+       
       
   
     );

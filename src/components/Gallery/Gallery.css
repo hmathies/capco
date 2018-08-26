@@ -6,17 +6,18 @@
 .grid{
     box-sizing: border-box;
     display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    /* max-width: 100%;
-    width: 100%; */
+    grid-template-columns: repeat(5, minmax(150px, 1fr));
+    grid-template-rows: repeat(4, minmax(150px, 1fr));
+    grid-auto-flow: dense;
+    max-width: 100%;
+    width: 100%;
+  
 
-    grid-template:
+    /* grid-template:
     [row1-start] "top top top top top" [row1-end]
     [row2-start] "top top top top top"  [row2-end]
     [row3-start] "bottom bottom bottom bottom bottom" [row3-end]
-    [row3-start] "bottom bottom bottom"  [row3-end];
+    [row3-start] "bottom bottom bottom"  [row3-end]; */
 
 }
 
