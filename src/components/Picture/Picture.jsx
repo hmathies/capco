@@ -1,16 +1,19 @@
 import React, { Component } from "react";
-import { Row, Col } from "react-bootstrap";
+
+import "./Picture.css";
 
 class Picture extends Component {
+
+
   render() {
     const { image } = this.props;
-
+   
     return (
-      <Row className="show-grid">
-        <Col lg={2}>
-          <img alt={"puppy"} className="grid" src={image.url} />
-        </Col>
-      </Row>
+       
+          <img alt={"puppy"} className="grid picture responsive" src={image.url} />
+
+        
+      
     );
   }
 }

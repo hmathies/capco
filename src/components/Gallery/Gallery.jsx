@@ -1,7 +1,8 @@
 import axios from "axios";
-import { Grid } from "react-bootstrap";
+import { Grid, Row , Col} from "react-bootstrap";
 import React, { Component } from "react";
 import Picture from "../Picture/Picture";
+import "./Gallery.css";
 
 class Gallery extends Component {
   constructor(props) {
@@ -9,7 +10,8 @@ class Gallery extends Component {
     console.log(this.props);
 
     this.state = {
-      images: []
+      images: [],
+      loadedImageId: []
     };
   }
   componentWillMount() {
@@ -21,14 +23,23 @@ class Gallery extends Component {
         const images = res.data;
         this.setState({ images });
       });
-  }
+      
+    }
+
+
 
   render() {
-    return <Grid>
-        {this.state.images.map((image, i) => (
-          <Picture key={image.id} image={image} />
-        ))}
-      </Grid>;
+    return (
+      <div className="grid">
+
+            {this.state.images.map((image, loadedImageId) => (
+              <Picture 
+                key={image.id} 
+                id={loadedImageId} 
+                image={image} />
+            ))}
+
+      </div>);
   }
 }
 
