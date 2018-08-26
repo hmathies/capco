@@ -9,10 +9,8 @@ class Picture extends Component {
     const { image } = this.props;
    
     return (
-       
-          <img alt={"puppy"} className="grid picture responsive" src={image.url} />
-
-        
+      
+          <img alt={"puppy"} className="grid picture responsive" src={image.url} />        
       
     );
   }

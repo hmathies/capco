@@ -1,5 +1,4 @@
 import axios from "axios";
-import { Grid, Row , Col} from "react-bootstrap";
 import React, { Component } from "react";
 import Picture from "../Picture/Picture";
 import "./Gallery.css";
@@ -30,15 +29,15 @@ class Gallery extends Component {
 
   render() {
     return (
-      <div className="grid">
-
-            {this.state.images.map((image, loadedImageId) => (
-              <Picture 
-                key={image.id} 
-                id={loadedImageId} 
-                image={image} />
-            ))}
-
+      <div className="container">
+        <div className="grid">
+          {this.state.images.map((image, loadedImageId) => (
+            <Picture 
+              key={image.id} 
+              id={loadedImageId} 
+              image={image} />
+          ))}
+        </div>
       </div>);
   }
 }
