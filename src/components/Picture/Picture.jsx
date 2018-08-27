@@ -11,7 +11,7 @@ class Picture extends Component {
   
     return (
       
-      <img alt={"puppy"} className={(this.props.id ===0 || this.props.id ===17? 'largePic' : 'picture')}  src={image.url} id={this.props.id}/>    
+      <img alt={"puppy"} className={(this.props.id === 1 || this.props.id === 12 ? 'span2 picture' : 'span1 picture')}  src={image.url} id={this.props.id}/>    
       
     );
   }

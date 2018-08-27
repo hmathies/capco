@@ -1,16 +1,19 @@
 .container {
     margin: 0 auto;
     max-width: 1280px;
+    padding:0;
 }
 
 .grid{
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: repeat(5, minmax(150px, 1fr));
-    grid-template-rows: repeat(4, minmax(150px, 1fr));
+    grid-template-columns: repeat(6, minmax(150px, auto));
+    grid-template-rows: repeat(4, minmax(150px, auto));
     grid-auto-flow: dense;
     max-width: 100%;
     width: 100%;
+    margin: 0;
+    padding:0;
   
 
     /* grid-template:
@@ -19,5 +22,10 @@
     [row3-start] "bottom bottom bottom bottom bottom" [row3-end]
     [row3-start] "bottom bottom bottom"  [row3-end]; */
 
+}
+
+Picture{
+    margin: 0;
+    padding:0;
 }
 
