@@ -5,10 +5,8 @@ import className from 'classnames';
 it('renders without crashing', () => {
     class Picture extends Component {
   
-
         render() {
           const { image } = this.props;
-      
         
           return (
             

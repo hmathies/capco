@@ -14,8 +14,6 @@ class Gallery extends Component {
     };
   }
 
-  
-
   componentWillMount() {
     axios
       .get(
@@ -27,9 +25,6 @@ class Gallery extends Component {
       });
       
     }
-
-
-
 
   render() {
     return (
