@@ -5,13 +5,22 @@ import className from "classnames";
 class Picture extends Component {
   
   handleClick = () =>{
-   function makeBig(){
+   function resizePic(){
+
      var element = document.getElementById("pic0");
-     element.classList.remove("span1");
-     element.classList.add("span2")
-   }
+     if (element.classList.contains("span1")) {
+      element.classList.remove("span1");
+      element.classList.add("span2")
+     }
+
+    else{
+      element.classList.add("span1");
+      element.classList.remove("span2")
+    }
+
+  }
     
-   makeBig();
+   resizePic();
   }
   render() {
     const { image } = this.props;
