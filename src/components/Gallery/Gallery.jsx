@@ -1,7 +1,9 @@
 import axios from "axios";
 import React, { Component } from "react";
 import Picture from "../Picture/Picture";
+import className from "classnames";
 import "./Gallery.css";
+import "../Picture/Picture.css"
 
 class Gallery extends Component {
   constructor(props) {
@@ -11,6 +13,9 @@ class Gallery extends Component {
       images: []
     };
   }
+
+  
+
   componentWillMount() {
     axios
       .get(
@@ -25,14 +30,16 @@ class Gallery extends Component {
 
 
 
+
   render() {
     return (
       <div className="container">
         <div className="grid">
-            {this.state.images.map((image, loadedImageId) => (
+            {this.state.images.map((image, picId) => (
               <Picture 
+                onClick={this.handleClick}
                 key={image.id} 
-                id={loadedImageId} 
+                id={picId} 
                 image={image} />
             ))}
         </div>
